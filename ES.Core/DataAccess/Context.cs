@@ -14,6 +14,7 @@ namespace ES.Core.DataAccess
         }
 
         public DbSet<Kategori> Kategoriler { get; set; }
+
         public DbSet<About> Abouts { get; set; }
         
     }
