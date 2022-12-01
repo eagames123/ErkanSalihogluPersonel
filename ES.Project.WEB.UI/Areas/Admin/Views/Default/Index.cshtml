@@ -1,0 +1,12 @@
+﻿@model List<ES.Project.Entity.Entities.Kategori>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Admin</h1>
+
+@foreach (var item in Model)
+{
+    <p>@item.Id</p>
+    <p>@item.KategoriAdi</p>
+}

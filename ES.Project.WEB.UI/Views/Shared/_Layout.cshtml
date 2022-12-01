@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+@await Html.PartialAsync("/Views/Layout_Partial/_HeaderPartial.cshtml")
+<body>
+
+    <div class="wrapper">
+        @await Component.InvokeAsync("_Sidebar")
+        <div class="content">
+            <!-- Navbar Start -->
+            @await Component.InvokeAsync("_Navbar")
+            <!-- Navbar End -->
+            @RenderBody()
+            <!-- Footer Start -->
+            @await Component.InvokeAsync("_SiteFooter")
+            <!-- Footer End -->
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    @await Html.PartialAsync("/Views/Layout_Partial/_ScriptPartial.cshtml")
+</body>
+</html>

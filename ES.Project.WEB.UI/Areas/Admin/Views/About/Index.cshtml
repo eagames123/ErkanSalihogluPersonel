@@ -1,0 +1,113 @@
+﻿@*@model Acci.Project.UI.Web.Areas.Admin.Models.HomeViewIndexModel*@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            Kategoriler
+        </h1>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Kategoriler</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Dil Kodu</th>
+                            <th>Kategori Adı</th>
+                            <th>Sıralama</th>
+                            <th>Yayın Durumu</th>
+                            <th>Hızlı Kategori Durumu</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @*@foreach (var item in Model.ActiveCategories)
+                        {
+                            <tr>
+                                <td>@item.CategoryId</td>
+                                <td>@item.LanguageCode</td>
+                                <td>@item.CategoryName</td>
+                                <td>@item.OrderLine</td>
+                                <td>
+                                    @if (item.IsApproved)
+                                    {
+                                        <a href="#" class="btn btn-success btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <span class="text">Yayında</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="btn btn-danger btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-trash"></i>
+                                            </span>
+                                            <span class="text">Yayında Değil</span>
+                                        </a>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.QuickCategory)
+                                    {
+                                        <a href="#" class="btn btn-success btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-check"></i>
+                                            </span>
+                                            <span class="text">Aktif</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#" class="btn btn-danger btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-trash"></i>
+                                            </span>
+                                            <span class="text">Pasif</span>
+                                        </a>
+                                    }
+                                </td>
+                                <td>
+                                    <a asp-area="Admin" asp-action="UpdateCategoryPage" asp-controller="Category" asp-route-categoryId="@item.CategoryId" class="btn btn-light btn-icon-split">
+                                        <span class="icon text-gray-600">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Güncelle</span>
+                                    </a>
+
+                                    <a asp-area="Admin" asp-action="DeleteCategoryPage" asp-controller="Category" asp-route-categoryId="@item.CategoryId" class="btn btn-light btn-icon-split">
+                                        <span class="icon text-gray-600">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Sil</span>
+                                    </a>
+
+                                    <a asp-area="Admin" asp-action="DetailCategoryPage" asp-controller="Category" asp-route-categoryId="@item.CategoryId" class="btn btn-info btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-info-circle"></i>
+                                        </span>
+                                        <span class="text">Detay Görüntüle</span>
+                                    </a>
+                                    <p>
+                                        <b>Eklenme Tarihi : </b> @item.AddedTime - <b>Ekleyen Kullanıcı : </b> @item.AddedByUser
+                                    </p>
+                                </td>
+                            </tr>
+                        }*@
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,128 @@
+﻿@*@model Acci.Project.UI.Web.Areas.Admin.Models.HomeViewIndexModel*@
+@{
+    ViewData["Title"] = "DetailCategoryPage";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            Kategori Detayı
+        </h1>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                @*<strong>Kategori Adı : </strong> @Model.Category.CategoryName*@
+            </h6>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-default">
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <form role="form" asp-controller="Category" asp-action="DeleteCategory" method="post">
+                                @*
+                                    <input type="hidden" asp-for="@Model.Category.CategoryId" />
+
+                                    <div class="form-group">
+                                        <label>Kategori Adı</label>
+                                        <input asp-for="@Model.Category.CategoryName" type="text" placeholder="Kategori Adı" class="form-control" disabled="">
+                                        <span asp-validation-for="@Model.Category.CategoryName"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Sıralama</label>
+                                        <input asp-for="@Model.Category.OrderLine" type="text" placeholder="Sıralama" class="form-control" disabled="">
+                                        <span asp-validation-for="@Model.Category.OrderLine"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Hızlı kategori alanında gösterilsin mi?</label>
+                                        <select asp-for="@Model.Category.QuickCategory" class="form-control" disabled="">
+                                            <option value="true">Evet</option>
+                                            <option value="false">Hayır</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Eklenme Tarihi</label>
+                                        <input asp-for="@Model.Category.AddedTime" type="text" placeholder="Sıralama" class="form-control" disabled="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Ekleyen Kullanıcı</label>
+                                        <input asp-for="@Model.Category.AddedByUser" type="text" placeholder="Sıralama" class="form-control" disabled="">
+                                    </div>
+
+                                    @if (@Model.Category.UpdatedByUser != null)
+                                    {
+                                        <div class="form-group">
+                                            <label>Güncelleme Tarihi</label>
+                                            <input asp-for="@Model.Category.UpdatedTime" type="text" placeholder="Sıralama" class="form-control" disabled="">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Güncelleyen Kullanıcı</label>
+                                            <input asp-for="@Model.Category.UpdatedByUser" type="text" placeholder="Sıralama" class="form-control" disabled="">
+                                        </div>
+                                    }
+
+                                    @*<div class="form-group">
+                                            <label>Aktif işlemini gerçekleştirmek istiyor musunuz?</label>
+                                            <select asp-for="@Model.Category.IsApproved" class="form-control" disabled="">
+                                                <option value="true">Evet</option>
+                                                <option value="false">Hayır</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Silme işlemini gerçekleştirmek istiyor musunuz?</label>
+                                            <select asp-for="@Model.Category.IsDeleted" class="form-control" disabled="">
+                                                <option value="true">Evet</option>
+                                                <option value="false">Hayır</option>
+                                            </select>
+                                        </div>*@
+
+                                    @*<a asp-area="Admin" asp-action="Index" asp-controller="Category" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-flag"></i>
+                                        </span>
+                                        <span class="text">Geri Dön</span>
+                                    </a>
+
+                                    <a asp-area="Admin" asp-action="UpdateCategoryPage" asp-controller="Category" asp-route-categoryId="@Model.Category.CategoryId" class="btn btn-light btn-icon-split">
+                                        <span class="icon text-gray-600">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Güncelle</span>
+                                    </a>
+
+                                    <a asp-area="Admin" asp-action="DeleteCategoryPage" asp-controller="Category" asp-route-categoryId="@Model.Category.CategoryId" class="btn btn-light btn-icon-split">
+                                        <span class="icon text-gray-600">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Sil</span>
+                                    </a>*@
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

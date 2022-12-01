@@ -1,0 +1,107 @@
+﻿@*@model Acci.Project.UI.Web.Areas.Admin.Models.HomeViewIndexModel*@
+@{
+    ViewData["Title"] = "InsertCategoryPage";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">
+            Kategori Ekle
+        </h1>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                <strong>Kategori Ekle </strong>
+            </h6>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-default">
+                        <div class="row">
+                            <div class="col-lg-12">
+@*
+                                <form role="form" asp-controller="Category" asp-action="InsertCategory" method="post">
+                                    
+                                    <div class="form-group">
+                                        <label>Dil Seçeneği</label>
+                                        <select asp-for="@Model.Language.LanguageId" asp-items="Model.SelectLanguagesList" class="form-control" required>
+                                            <option value="">Lütfen Seçiniz</option>
+                                        </select>
+                                        <span>Örnek : Türkçe</span>
+                                        <span class="alert-danger" asp-validation-for="@Model.Language.LanguageId"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Kategori Adı</label>
+                                        <input asp-for="@Model.Category.CategoryName" type="text" placeholder="Kategori Adı" class="form-control">
+                                        <span>Örnek : Acil Servis</span>
+                                        <span class="alert-danger" asp-validation-for="@Model.Category.CategoryName"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Sıralama</label>
+                                        <input asp-for="@Model.Category.OrderLine" type="text" placeholder="Sıralama" class="form-control">
+                                        <span>Örnek : 1</span>
+                                        <span class="alert-danger" asp-validation-for="@Model.Category.OrderLine"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Hızlı kategori alanında gösterilsin mi?</label>
+                                        <select asp-for="@Model.Category.QuickCategory" class="form-control">
+                                            <option value="">Lütfen Seçiniz</option>
+                                            <option value="true">Evet</option>
+                                            <option value="false">Hayır</option>
+                                        </select>
+                                        <span>Örnek : Evet</span>
+                                        <span class="alert-danger" asp-validation-for="@Model.Category.QuickCategory"></span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Aktif işlemini gerçekleştirmek istiyor musunuz?</label>
+                                        <select asp-for="@Model.Category.IsApproved" class="form-control">
+                                            <option value="">Lütfen Seçiniz</option>
+                                            <option value="true">Evet</option>
+                                            <option value="false">Hayır</option>
+                                        </select>
+                                        <span>Örnek : Evet</span>
+                                        <span class="alert-danger" asp-validation-for="@Model.Category.IsApproved"></span>
+                                    </div>*@
+
+                                    @*<div class="form-group">
+                                            <label>Silme işlemini gerçekleştirmek istiyor musunuz?</label>
+                                            <select asp-for="@Model.Category.IsDeleted" class="form-control">
+                                                <option value="true">Evet</option>
+                                                <option value="false">Hayır</option>
+                                            </select>
+                                        </div>*@
+@*
+                                    <button type="submit" class="btn btn-info">Ekle</button>
+
+                                    <a asp-area="Admin" asp-action="Index" asp-controller="Category" class="btn btn-warning btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </span>
+                                        <span class="text">Vazgeç</span>
+                                    </a>*@
+
+                                @*</form>*@
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
